@@ -108,10 +108,10 @@
 				C7B57A162C9ADE1900BDB05F /* ScreenshotHandler.swift */,
 				C7624FD22C99C13700D97983 /* TimeTrackerApp.swift */,
 				C7624FFD2C99C2AE00D97983 /* TimeTracker.swift */,
+				C7624FFF2C99C31700D97983 /* SettingsView.swift */,
 				C7624FD62C99C13800D97983 /* Assets.xcassets */,
 				C7624FD82C99C13800D97983 /* TimeTracker.entitlements */,
 				C7624FD92C99C13800D97983 /* Preview Content */,
-				C7624FFF2C99C31700D97983 /* SettingsView.swift */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -445,6 +445,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "AI Vision Timer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -486,6 +487,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "AI Vision Timer";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
