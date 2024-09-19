@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		C7624FD32C99C13700D97983 /* TimeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7624FD22C99C13700D97983 /* TimeTrackerApp.swift */; };
-		C7624FD52C99C13700D97983 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7624FD42C99C13700D97983 /* ContentView.swift */; };
 		C7624FD72C99C13800D97983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7624FD62C99C13800D97983 /* Assets.xcassets */; };
 		C7624FDB2C99C13800D97983 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7624FDA2C99C13800D97983 /* Preview Assets.xcassets */; };
 		C7624FE52C99C13800D97983 /* TimeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7624FE42C99C13800D97983 /* TimeTrackerTests.swift */; };
 		C7624FEF2C99C13800D97983 /* TimeTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7624FEE2C99C13800D97983 /* TimeTrackerUITests.swift */; };
 		C7624FF12C99C13800D97983 /* TimeTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7624FF02C99C13800D97983 /* TimeTrackerUITestsLaunchTests.swift */; };
+		C7624FFE2C99C2AE00D97983 /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7624FFD2C99C2AE00D97983 /* TimeTracker.swift */; };
+		C76250002C99C31700D97983 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7624FFF2C99C31700D97983 /* SettingsView.swift */; };
+		C7B57A172C9ADE2100BDB05F /* ScreenshotHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B57A162C9ADE1900BDB05F /* ScreenshotHandler.swift */; };
+		C7B57A192C9ADE3900BDB05F /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B57A182C9ADE3500BDB05F /* APIHandler.swift */; };
+		C7B57A1B2C9ADE4E00BDB05F /* CSVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B57A1A2C9ADE4B00BDB05F /* CSVHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		C7624FCF2C99C13700D97983 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7624FD22C99C13700D97983 /* TimeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerApp.swift; sourceTree = "<group>"; };
-		C7624FD42C99C13700D97983 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7624FD62C99C13800D97983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7624FD82C99C13800D97983 /* TimeTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeTracker.entitlements; sourceTree = "<group>"; };
 		C7624FDA2C99C13800D97983 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +48,11 @@
 		C7624FEA2C99C13800D97983 /* TimeTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7624FEE2C99C13800D97983 /* TimeTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerUITests.swift; sourceTree = "<group>"; };
 		C7624FF02C99C13800D97983 /* TimeTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C7624FFD2C99C2AE00D97983 /* TimeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTracker.swift; sourceTree = "<group>"; };
+		C7624FFF2C99C31700D97983 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C7B57A162C9ADE1900BDB05F /* ScreenshotHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotHandler.swift; sourceTree = "<group>"; };
+		C7B57A182C9ADE3500BDB05F /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		C7B57A1A2C9ADE4B00BDB05F /* CSVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +103,15 @@
 		C7624FD12C99C13700D97983 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C7B57A1A2C9ADE4B00BDB05F /* CSVHandler.swift */,
+				C7B57A182C9ADE3500BDB05F /* APIHandler.swift */,
+				C7B57A162C9ADE1900BDB05F /* ScreenshotHandler.swift */,
 				C7624FD22C99C13700D97983 /* TimeTrackerApp.swift */,
-				C7624FD42C99C13700D97983 /* ContentView.swift */,
+				C7624FFD2C99C2AE00D97983 /* TimeTracker.swift */,
 				C7624FD62C99C13800D97983 /* Assets.xcassets */,
 				C7624FD82C99C13800D97983 /* TimeTracker.entitlements */,
 				C7624FD92C99C13800D97983 /* Preview Content */,
+				C7624FFF2C99C31700D97983 /* SettingsView.swift */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -193,7 +205,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					C7624FCE2C99C13700D97983 = {
 						CreatedOnToolsVersion = 15.4;
@@ -208,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C7624FCA2C99C13700D97983 /* Build configuration list for PBXProject "TimeTracker" */;
+			buildConfigurationList = C7624FCA2C99C13700D97983 /* Build configuration list for PBXProject "Ai Vision Timer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7624FD52C99C13700D97983 /* ContentView.swift in Sources */,
+				C76250002C99C31700D97983 /* SettingsView.swift in Sources */,
 				C7624FD32C99C13700D97983 /* TimeTrackerApp.swift in Sources */,
+				C7B57A192C9ADE3900BDB05F /* APIHandler.swift in Sources */,
+				C7B57A1B2C9ADE4E00BDB05F /* CSVHandler.swift in Sources */,
+				C7B57A172C9ADE2100BDB05F /* ScreenshotHandler.swift in Sources */,
+				C7624FFE2C99C2AE00D97983 /* TimeTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +347,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -392,6 +409,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -416,12 +434,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = TimeTracker/TimeTracker.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Vision Timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -440,10 +463,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = comwrap.TimeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -452,12 +475,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = TimeTracker/TimeTracker.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Vision Timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -476,20 +504,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = comwrap.TimeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		C7624FF82C99C13800D97983 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
@@ -508,10 +536,10 @@
 		C7624FF92C99C13800D97983 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
@@ -530,9 +558,9 @@
 		C7624FFB2C99C13800D97983 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
@@ -551,9 +579,9 @@
 		C7624FFC2C99C13800D97983 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.1;
@@ -572,7 +600,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C7624FCA2C99C13700D97983 /* Build configuration list for PBXProject "TimeTracker" */ = {
+		C7624FCA2C99C13700D97983 /* Build configuration list for PBXProject "Ai Vision Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C7624FF22C99C13800D97983 /* Debug */,
