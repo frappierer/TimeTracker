@@ -5,7 +5,8 @@ You can think of this as a template for coding native MacOS applications that ca
 
 TimeTracker is a native MacOS application designed to help users track the time they spend on various activities. It takes screenshots at regular intervals, compares them to detect changes, and logs the activity using OpenAI's API. The application also provides a menu bar interface for easy access and configuration.
 At the end of the day I use GPT to summarise the .csv to tell me what I have done during the day so I can log my time in Jira.
-## Features
+
+## AI Vision TimeTracker Features
 
 - **Time Tracking**: Start and stop time tracking with a simple menu bar interface.
 - **Screenshot Capture**: Automatically captures screenshots at specified intervals.
@@ -71,6 +72,18 @@ Currently, it stores the structured output from open AI to a csv located in /Use
 
 By following these steps, the application efficiently tracks your activities and logs them for easy review and time management.
 
+## More ideas you can deliver using the Boilerplate
+
+* **Productivity Tracke**r: Monitor and analyze your work habits to improve productivity.
+* **Parental Control App**: Keep track of children's screen time and activities.
+* **Security Surveillance**: Capture and analyze screen activity for security purposes.
+* **User Behavior Analysis**: Study user interactions with software for UX improvements.
+* **Remote Work Monitoring**: Track remote employees' screen activities for accountability.
+* **Educational Tools**: Monitor students' screen activities during online learning.
+* **Content Moderation**: Automatically detect and flag inappropriate content on screens.
+* **Health and Wellness App**: Track screen time to promote healthier digital habits.
+* **Customer Support Tool**: Analyze customer interactions with software for better support.
+* **Research and Development**: Use screen capture data for various research projects.
 
 ## Code Structure
 
