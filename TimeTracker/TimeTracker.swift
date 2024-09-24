@@ -33,6 +33,7 @@ class TimeTracker: ObservableObject {
 
     private var outputFolder: URL
     private var csvFilePath: URL
+    private var wasTrackingBeforeLock = false // Track if it was tracking before lock
 
     init() {
         // Initialize properties that don't depend on self
@@ -48,6 +49,14 @@ class TimeTracker: ObservableObject {
         // Initialize handlers
         self.screenshotHandler = ScreenshotHandler(outputFolder: outputFolder)
         self.csvHandler = CSVHandler(csvFilePath: csvFilePath)
+        
+        // Add system event observers
+        addSystemEventObservers()
+    }
+
+    deinit {
+        // Remove system event observers
+        removeSystemEventObservers()
     }
 
     private var settingsWindow: NSWindow?
@@ -55,6 +64,11 @@ class TimeTracker: ObservableObject {
     func start() {
         guard !isTracking else { return }
         isTracking = true
+        
+        // Capture a screenshot immediately
+        captureScreenshots()
+        
+        // Set up the timer to capture screenshots at the specified interval
         timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in
             self.captureScreenshots()
         }
@@ -94,6 +108,61 @@ class TimeTracker: ObservableObject {
             DispatchQueue.main.async {
                 self.settingsWindow?.makeKeyAndOrderFront(nil)
             }
+        }
+    }
+
+    // MARK: - System Event Observers
+
+    private func addSystemEventObservers() {
+        let center = NSWorkspace.shared.notificationCenter
+        center.addObserver(self, selector: #selector(systemDidWake), name: NSWorkspace.didWakeNotification, object: nil)
+        center.addObserver(self, selector: #selector(systemWillSleep), name: NSWorkspace.willSleepNotification, object: nil)
+        
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(screenIsLocked), name: Notification.Name("com.apple.screenIsLocked"), object: nil)
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(screenIsUnlocked), name: Notification.Name("com.apple.screenIsUnlocked"), object: nil)
+    }
+
+    private func removeSystemEventObservers() {
+        let center = NSWorkspace.shared.notificationCenter
+        center.removeObserver(self)
+        DistributedNotificationCenter.default().removeObserver(self)
+    }
+
+    @objc private func systemDidWake() {
+        // Handle system wakeup
+        print("System woke up")
+        if wasTrackingBeforeLock {
+            start()
+        }
+    }
+
+    @objc private func systemWillSleep() {
+        // Handle system sleep
+        print("System will sleep")
+        if isTracking {
+            wasTrackingBeforeLock = true
+            stop()
+        } else {
+            wasTrackingBeforeLock = false
+        }
+    }
+
+    @objc private func screenIsLocked() {
+        // Handle screen locking (screensaver starts)
+        print("Screen is locked")
+        if isTracking {
+            wasTrackingBeforeLock = true
+            stop()
+        } else {
+            wasTrackingBeforeLock = false
+        }
+    }
+
+    @objc private func screenIsUnlocked() {
+        // Handle screen unlocking (screensaver ends)
+        print("Screen is unlocked")
+        if wasTrackingBeforeLock {
+            start()
         }
     }
 }
